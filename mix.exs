@@ -27,5 +27,5 @@ defmodule PredicatorEcto.MixProject do
 
   def application, do: [extra_applications: [:logger]]
 
-  defp deps, do: []
+  defp deps, do: [{:poison, "~> 3.1"}]
 end
