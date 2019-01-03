@@ -15,6 +15,7 @@ defmodule Predicator.PredicateType do
   def load(data) when is_binary(data), do: {:ok, decode!(data)}
   def load(_data), do: :error
 
-  def dump(data) when is_list(data), do: encode!(data)
+  def dump(data) when is_list(data), do: {:ok, encode!(data)}
+  def dump(data) when is_binary(data), do: {:ok, data}
   def dump(_data), do: :error
 end
